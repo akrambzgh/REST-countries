@@ -1,0 +1,40 @@
+@use "../vars.scss" as vars;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: vars.$white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .symbol {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    h1 {
+      font-size: 18px;
+    }
+  }
+  .theme {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    img {
+      width: 14px;
+    }
+    span {
+      font-size: 15px;
+      font-weight: 700;
+      margin-left: 10px;
+    }
+  }
+}

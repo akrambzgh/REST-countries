@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-function Country({ country }) {
+function Country({ country, handleDetails }) {
   return (
-    <div className="country">
+    <div className="country" onClick={handleDetails}>
       <div className="flag">
         <img src={country.flags?.png} alt="" />
       </div>

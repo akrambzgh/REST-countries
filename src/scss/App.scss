@@ -1,0 +1,49 @@
+@use "./vars.scss" as vars;
+@use "./layout/index" as *;
+@import "./dark.scss";
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  font-family: "Nunito Sans", sans-serif;
+  color: vars.$veryDarkBlueText;
+}
+
+main.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+  min-height: calc(100vh - 67px);
+  .container {
+    width: 90%;
+    .no-country {
+      font-size: 50px;
+      color: vars.$white;
+      text-transform: capitalize;
+    }
+  }
+}

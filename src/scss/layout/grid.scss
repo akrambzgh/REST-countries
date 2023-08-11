@@ -1,0 +1,55 @@
+@use "../vars.scss" as vars;
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 68px;
+  .country {
+    height: 330px;
+    width: 220px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    .flag {
+      height: 155px;
+      width: 100%;
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        max-height: 100%;
+      }
+    }
+    h5.country-name {
+      font-size: 20px;
+      color: vars.$darkBlue;
+      text-transform: capitalize;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+    .info {
+      height: calc(100% - 185px);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      h5 {
+        font-size: 13px;
+        color: vars.$darkBlue;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        &.country-name {
+          font-size: 18px;
+        }
+        span {
+          color: vars.$darkGray;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

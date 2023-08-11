@@ -1,0 +1,84 @@
+@use "./vars.scss" as vars;
+
+.App.dark {
+  .header {
+    background-color: vars.$darkBlue;
+    color: vars.$white;
+    box-shadow: none;
+  }
+  main {
+    background-color: vars.$veryDarkBlue;
+    .container {
+      .search {
+        .search-for-country-name {
+          background-color: vars.$white;
+        }
+      }
+      .grid {
+        .country {
+          background-color: vars.$darkBlue;
+          box-shadow: none;
+          .flag {
+            img {
+              box-shadow: none;
+            }
+          }
+          h5.country-name {
+            color: vars.$white;
+          }
+          .info {
+            h5 {
+              color: vars.$white;
+              span {
+                color: vars.$veryLightGray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .country-details {
+    background-color: vars.$veryDarkBlue;
+    .back {
+      button {
+        background-color: vars.$veryDarkBlue;
+        color: vars.$white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+    }
+    .main-details {
+      .details {
+        & > h1 {
+          color: vars.$white;
+        }
+        .text-info {
+          .left,
+          .right {
+            h3 {
+              color: vars.$white;
+              span {
+                color: vars.$veryLightGray;
+              }
+            }
+          }
+        }
+        .borders {
+          & > span {
+            color: vars.$white;
+          }
+          .countries {
+            span {
+              border-color: vars.$veryLightGray;
+              color: vars.$white;
+              &:hover {
+                background-color: vars.$darkBlue;
+                color: vars.$white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

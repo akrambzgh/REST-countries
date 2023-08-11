@@ -1,0 +1,140 @@
+@use "../vars.scss" as vars;
+
+.country-details {
+  position: absolute;
+  top: 67px;
+  left: 0;
+  height: calc(100vh - 67px);
+  background-color: vars.$veryLightGray;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 67px;
+    left: 0;
+  }
+  .back {
+    padding-top: 25px;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      gap: 10px;
+      background-color: vars.$veryLightGray;
+      margin-left: 10%;
+      @media (max-width: 767px) {
+        margin-left: 2.5%;
+      }
+      img {
+        width: 25px;
+      }
+    }
+  }
+  .main-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 70px auto;
+    gap: 100px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 2.5%;
+      gap: 30px;
+      width: 100%;
+    }
+    .country-flag {
+      width: 50%;
+      @media (max-width: 767px) {
+        width: 95%;
+      }
+    }
+    .details {
+      width: 50%;
+      @media (max-width: 767px) {
+        width: 95%;
+      }
+      & > h1 {
+        font-size: 35px;
+        margin-bottom: 40px;
+        @media (max-width: 767px) {
+          margin-bottom: 15px;
+        }
+      }
+      .text-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        @media (max-width: 767px) {
+          flex-direction: column;
+        }
+        .left,
+        .right {
+          @media (max-width: 767px) {
+            margin-bottom: 20px;
+          }
+          h3 {
+            font-size: 16px;
+            color: vars.$darkBlue;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            &.country-name {
+              font-size: 18px;
+            }
+            span {
+              color: vars.$darkGray;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+      .borders {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        @media (max-width: 767px) {
+          text-align: left;
+        }
+        & > span {
+          font-weight: 700;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+        }
+        .countries {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          span {
+            border: 2px solid vars.$darkGray;
+            padding: 3px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            transition: 300ms;
+            &:hover {
+              background-color: vars.$darkGray;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

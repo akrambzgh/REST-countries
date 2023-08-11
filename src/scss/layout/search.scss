@@ -1,0 +1,38 @@
+@use "../vars.scss" as vars;
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  .search-for-country-name {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    img {
+      width: 20px;
+    }
+    input {
+      font-family: inherit;
+      flex: 1;
+      border: none;
+      padding: 15px;
+      color: vars.$darkBlue;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .filter {
+  }
+}
