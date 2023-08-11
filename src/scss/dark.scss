@@ -5,6 +5,11 @@
     background-color: vars.$darkBlue;
     color: vars.$white;
     box-shadow: none;
+    .search {
+      .search-for-country-name {
+        background-color: white;
+      }
+    }
   }
   main {
     background-color: vars.$veryDarkBlue;
