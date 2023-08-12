@@ -48,15 +48,15 @@ function CountryDetails({ show, removeDetails, isDarkTheme, country }) {
               <h3>
                 top level domain: <span>{country.topLevelDomain}</span>
               </h3>
-              <h3>
-                currencies:{" "}
-                {country.currencies[0] && (
+              {country.currencies && country.currencies[0] && (
+                <h3>
+                  currencies:{" "}
                   <span>
                     {country.currencies[0].name}, (
                     {country.currencies[0].symbol})
                   </span>
-                )}
-              </h3>
+                </h3>
+              )}
               <h3>
                 languages:{" "}
                 {country.languages.map((language, index) => (
